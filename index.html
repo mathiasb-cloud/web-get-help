@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Apoyo Psicológico</title>
   <style>
@@ -61,12 +63,12 @@
 
     .star {
       position: absolute;
-      width: 100px;
-      height: 100px;
+      width: 50px;
+      height: 50px;
     }
 
-    .star1 { top: 20%; left: 10%; }
-    .star2 { top: 30%; right: 10%; }
+    .star1 { top: 23%; left: 10%; }
+    .star2 { top: 45%; right: 10%; }
 
     .logo {
       position: absolute;
@@ -148,7 +150,7 @@
     }
 
     /* ← Continuará en la Parte 2 ↓ */
-   <style>
+   
     .info-section {
       padding: 80px 40px;
       background: transparent;
@@ -196,7 +198,7 @@
     }
 
     .causas-section {
-      padding: 80px 20px;
+      
       text-align: center;
     }
 
@@ -278,11 +280,12 @@
       line-height: 1.4;
       text-align: center;
     }
-  <style>
+  
     .consecuencias-wrapper {
-      margin: 100px auto;
+      
       padding: 40px;
       max-width: 1300px;
+      text-align: center;
     }
 
     .consecuencias-title {
@@ -294,34 +297,33 @@
     }
 
     .consecuencias-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+}
 
     .consecuencias-cards {
-      display: grid;
-      grid-template-columns: 220px 220px;
-      grid-template-rows: 220px 460px;
-      grid-template-areas: "a b" "c b";
-      gap: 20px;
-      flex: 1;
-      min-width: 460px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
 
     .consecuencia-card {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      border-radius: 20px;
-      color: rgb(41, 39, 39);
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
+  width: 100%;
+  border-radius: 16px;
+  padding: 1.2rem;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
     .consecuencia-card:hover {
       transform: scale(1.05);
@@ -338,8 +340,25 @@
     }
 
     .consecuencia-text {
-      font-size: 1.4em;
-    }
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 480px) {
+  .consecuencia-card {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .consecuencia-tip {
+    font-size: 1rem;
+  }
+
+  .consecuencia-text {
+    font-size: 0.9rem;
+  }
+}
 
     .consecuencia-red {
       background-color: #67aaf7;
@@ -483,6 +502,7 @@
   padding-bottom: 1.1em;
   border-radius: 32px;
   margin: 1em;
+  width: 310px;
 }
 
 .loader {
@@ -495,6 +515,7 @@
   justify-content: right;
   border-radius: 10px;
   transition: .4s ease-in-out;
+  text-align: start;
 }
 
 .loader:hover {
@@ -716,6 +737,256 @@
   transition: 1s all;
 }
 
+
+
+
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+  
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+
+@media (max-width: 768px) {
+  .hovercard {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    align-items: center;
+  }
+
+  .hovercard p {
+    width: 90%;
+    height: auto;
+    flex: none;
+    align-items: flex-start;
+    padding: 1.2em;
+    cursor: default;
+    box-sizing: border-box;
+    background: #fefefe;
+    border-radius: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-left: 20px;
+  }
+
+  .hovercard p span {
+    transform: rotate(0deg);
+    text-align: left;
+    display: block;
+    padding: 0.3em 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #065f46;
+  }
+
+  .hovercard-info {
+    display: inline;
+    margin-top: 0.5em;
+    color: #475569;
+  }
+  .hovercard-tittle{
+    text-align: center;
+    margin-left: 50px;
+
+  }
+  .hovercard-section{
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+
+
+
+  .form-section {
+    padding: 40px 20px;
+    background: #fefcf5;
+    color: #14452f;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+
+  .form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #0d5c4d;
+    animation: fadeInDown 1s ease-out;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+    animation: floatIn 0.8s ease-in-out;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  select {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #0d5c4d;
+    border-radius: 16px;
+    font-size: 1rem;
+    background-color: #ffffff;
+  }
+
+  button {
+    padding: 12px 25px;
+    background: linear-gradient(to right, #0d5c4d, #20b486);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  .resultado {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #e9fff3;
+    padding: 20px;
+    border: 2px dashed #0d5c4d;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .oculto {
+    display: none;
+  }
+
+  /* Animations */
+  @keyframes floatIn {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    select {
+      font-size: 0.9rem;
+    }
+
+    .form-section h2 {
+      font-size: 1.5rem;
+    }
+
+    button {
+      width: 80%;
+    }
+  }
+
+
+/* Loader animado - basado en Uiverse.io by SchawnnahJ */
+.loader-spinner {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(165deg);
+  margin: 20px auto;
+}
+
+.loader-spinner:before,
+.loader-spinner:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
+}
+
+.loader-spinner:before {
+  animation: loaderBefore 2s infinite;
+}
+
+.loader-spinner:after {
+  animation: loaderAfter 2s infinite;
+}
+
+@keyframes loaderBefore {
+  0% {
+    width: 0.5em;
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75),
+                -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+  35% {
+    width: 2.5em;
+    box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75),
+                0 0.5em rgba(111, 202, 220, 0.75);
+  }
+  70% {
+    width: 0.5em;
+    box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75),
+                1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+  100% {
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75),
+                -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+}
+
+@keyframes loaderAfter {
+  0% {
+    height: 0.5em;
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75),
+                -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+  35% {
+    height: 2.5em;
+    box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75),
+                -0.5em 0 rgba(233, 169, 32, 0.75);
+  }
+  70% {
+    height: 0.5em;
+    box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75),
+                -0.5em 1em rgba(233, 169, 32, 0.75);
+  }
+  100% {
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75),
+                -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+}
+
+
+
   </style>
 <body>
   <header>
@@ -800,11 +1071,11 @@
       </div>
     </div>
   </section>
-<section class="consecuencias-wrapper" style="margin-top: -40px;">
+<section class="consecuencias-wrapper" style="margin-top: -20px;">
   <h1 class="spotify-title" style="font-family: var(--titleFont); color: #065f46; font-size: 4em; margin-left: 130px;">Consecuencias</h1>
   
   <div class="consecuencias-grid">
-    <div class="consecuencias-cards" style="margin-left: 130px;">
+    <div class="consecuencias-cards">
       <div class="consecuencia-card consecuencia-red">
         <p class="consecuencia-tip">Bajo rendimiento</p>
         <p class="consecuencia-text">Dificultad para concentrarse y bajo desempeño académico o laboral.</p>
@@ -823,9 +1094,7 @@
       <h1 class="spotify-title" style="font-family: var(--titleFont); color: #065f46; font-size: 4em;">Musica segun expertos</h1>
       <div class="main">
         <div class="currentplaying">
-          <svg height="50px" width="50px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="spotify">
-            <circle cx="32" cy="32" r="30" fill="limegreen"/>
-          </svg>
+          <svg height="50px" width="50px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="spotify"><radialGradient gradientUnits="userSpaceOnUse" gradientTransform="translate(0 -534)" r="43.888" cy="572.064" cx="33.34" id="ipdIa4~cOclR8yt_ClW93a"><stop stop-color="#f4e9c3" offset="0"></stop><stop stop-color="#f8eecd" offset=".219"></stop><stop stop-color="#fdf4dc" offset=".644"></stop><stop stop-color="#fff6e1" offset="1"></stop></radialGradient><path d="M51.03,37.34c0.16,0.98,1.08,1.66,2.08,1.66h5.39c2.63,0,4.75,2.28,4.48,4.96	C62.74,46.3,60.64,48,58.29,48H49c-1.22,0-2.18,1.08-1.97,2.34c0.16,0.98,1.08,1.66,2.08,1.66h8.39c1.24,0,2.37,0.5,3.18,1.32	C61.5,54.13,62,55.26,62,56.5c0,2.49-2.01,4.5-4.5,4.5h-49c-1.52,0-2.9-0.62-3.89-1.61C3.62,58.4,3,57.02,3,55.5	C3,52.46,5.46,50,8.5,50H14c1.22,0,2.18-1.08,1.97-2.34C15.81,46.68,14.89,44,13.89,44H5.5c-2.63,0-4.75-2.28-4.48-4.96	C1.26,36.7,3.36,35,5.71,35H8c1.71,0,3.09-1.43,3-3.16C10.91,30.22,9.45,29,7.83,29H4.5c-2.63,0-4.75-2.28-4.48-4.96	C0.26,21.7,2.37,20,4.71,20H20c0.83,0,1.58-0.34,2.12-0.88C22.66,18.58,23,17.83,23,17c0-1.66-1.34-3-3-3h-1.18	c-0.62-0.09-1.43,0-2.32,0h-9c-1.52,0-2.9-0.62-3.89-1.61S2,10.02,2,8.5C2,5.46,4.46,3,7.5,3h49c3.21,0,5.8,2.79,5.47,6.06	C61.68,11.92,60.11,14,57.24,14H52c-2.76,0-5,2.24-5,5c0,1.38,0.56,2.63,1.46,3.54C49.37,23.44,50.62,24,52,24h6.5	c3.21,0,5.8,2.79,5.47,6.06C63.68,32.92,61.11,35,58.24,35H53C51.78,35,50.82,36.08,51.03,37.34z" fill="url(#ipdIa4~cOclR8yt_ClW93a)"></path><linearGradient gradientUnits="userSpaceOnUse" gradientTransform="translate(0 -534)" y2="590.253" y1="530.096" x2="32" x1="32" id="ipdIa4~cOclR8yt_ClW93b"><stop stop-color="#42d778" offset="0"></stop><stop stop-color="#3dca76" offset=".428"></stop><stop stop-color="#34b171" offset="1"></stop></linearGradient><path d="M57,32c0,12.837-9.663,23.404-22.115,24.837C33.942,56.942,32.971,57,32,57	c-1.644,0-3.25-0.163-4.808-0.471C15.683,54.298,7,44.163,7,32C7,18.192,18.192,7,32,7S57,18.192,57,32z" fill="url(#ipdIa4~cOclR8yt_ClW93b)"></path><path d="M41.683,44.394c-0.365,0-0.731-0.181-1.096-0.365c-3.471-2.009-7.674-3.105-12.24-3.105	c-2.559,0-5.116,0.364-7.491,0.912c-0.365,0-0.914,0.183-1.096,0.183c-0.914,0-1.461-0.732-1.461-1.462	c0-0.913,0.547-1.463,1.279-1.643c2.923-0.732,5.846-1.096,8.951-1.096c5.116,0,9.866,1.276,13.885,3.655	c0.548,0.364,0.914,0.73,0.914,1.642C43.145,43.847,42.414,44.394,41.683,44.394z M44.241,38.181c-0.547,0-0.912-0.18-1.279-0.364	c-3.835-2.375-9.135-3.839-15.163-3.839c-2.924,0-5.664,0.366-7.674,0.916c-0.549,0.18-0.731,0.18-1.096,0.18	c-1.096,0-1.827-0.912-1.827-1.826c0-1.096,0.549-1.645,1.461-2.009c2.74-0.73,5.481-1.279,9.317-1.279	c6.213,0,12.241,1.463,16.991,4.384c0.73,0.364,1.096,1.096,1.096,1.826C46.069,37.269,45.337,38.181,44.241,38.181z M47.165,30.876	c-0.548,0-0.731-0.182-1.279-0.364c-4.385-2.559-10.961-4.021-17.356-4.021c-3.289,0-6.577,0.366-9.5,1.096	c-0.366,0-0.731,0.182-1.279,0.182c-1.279,0.183-2.193-0.912-2.193-2.192c0-1.279,0.731-2.009,1.644-2.192	c3.471-1.096,7.125-1.462,11.327-1.462c6.943,0,14.25,1.462,19.731,4.567c0.73,0.366,1.278,1.096,1.278,2.193	C49.357,29.961,48.442,30.876,47.165,30.876z" fill="#fff"></path></svg>
           <p class="heading">Fuerza para Florecer</p>
         </div>
         <div class="loader">
@@ -877,6 +1146,85 @@
     </div>
   </div>
 </section>
+<section class="hovercard-section">
+  <h2 class="hovercard-title">Testimonios reales</h2>
+  <div class="hovercard">
+    <p>
+      <span><strong>Lesly, 17 años</strong></span>
+      <span class="hovercard-info">
+        Sentía que todo lo que hacía estaba mal. Me comparaba con todos, y pensaba que no valía nada.
+        <br><br>
+        Pero un día mi mejor amiga me abrazó y me dijo que me extrañaba. Ese abrazo me hizo llorar, pero también me hizo dar cuenta de que no estaba sola.
+        <br><br>
+        Si tú estás pasando por algo parecido: no estás sol@. A veces el primer paso es hablar, aunque dé miedo.
+      </span>
+    </p>
+    <p>
+      <span><strong>José, 20 años</strong></span>
+      <span class="hovercard-info">
+        Siempre hacía chistes, pero por dentro me sentía vacío. Dormía todo el día y dejé la universidad.
+        <br><br>
+        Hasta que un día, le conté a mi hermano. Él solo me escuchó. Eso fue el inicio. Fui a terapia y descubrí cosas de mí.
+        <br><br>
+        No estás roto, solo estás herido. Sanar es posible.
+      </span>
+    </p>
+    <p>
+      <span><strong>Sofía, 19 años</strong></span>
+      <span class="hovercard-info">
+        Me exigía ser la mejor. Sonreía, pero lloraba sin razón. Me dolía el cuerpo y nadie lo notaba.
+        <br><br>
+        Una profesora me dijo: “No tienes que cargar todo tú sola”. Fui a terapia y entendí que mi valor no depende de mis logros.
+        <br><br>
+        Si te sientes así, mereces apoyo. No estás exagerando. Tu dolor importa.
+      </span>
+    </p>
+  </div>
+</section>
+<section class="form-section">
+  <h2>Conócete mejor 💡</h2><div class="loader-spinner"></div>
+
+  <form id="personality-form">
+    <div class="form-group animate">
+      <label>¿Qué te gusta hacer en tu tiempo libre?</label>
+      <select name="hobby" required>
+        <option value="">Selecciona una opción</option>
+        <option value="creativo">Crear cosas (dibujar, escribir, diseñar)</option>
+        <option value="social">Salir con amigos o conocer gente nueva</option>
+        <option value="reflexivo">Leer, ver documentales, aprender cosas</option>
+        <option value="activo">Moverte, hacer deporte o explorar</option>
+      </select>
+    </div>
+
+    <div class="form-group animate">
+      <label>¿Dónde te sientes más cómodo?</label>
+      <select name="ambiente" required>
+        <option value="">Selecciona una opción</option>
+        <option value="tranquilo">En un lugar tranquilo y acogedor</option>
+        <option value="retador">En retos que me hacen crecer</option>
+        <option value="colaborativo">En ambientes donde colaboro con otros</option>
+        <option value="libre">En espacios donde soy libre de expresarme</option>
+      </select>
+    </div>
+
+    <div class="form-group animate">
+      <label>¿Cuál crees que es tu mayor fortaleza?</label>
+      <select name="fortaleza" required>
+        <option value="">Selecciona una opción</option>
+        <option value="empatia">Empatía y comprensión</option>
+        <option value="creatividad">Creatividad e imaginación</option>
+        <option value="resiliencia">Resiliencia y perseverancia</option>
+        <option value="liderazgo">Liderazgo e inspiración</option>
+      </select>
+    </div>
+
+    <button type="submit">Ver mi resultado 🌱</button>
+  </form>
+
+  <div id="resultado" class="resultado oculto"></div>
+</section>
+
+
 <section class="ayuda-section">
   <h2>¿Necesitas ayuda?</h2>
   <p>
@@ -899,10 +1247,44 @@
   </div>
 </section>
 
+
+
+
 <footer>
   <p>© 2025 Apoyo Psicológico | Hecho por Mathias Benites | UCV</p>
 </footer>
 </body>
+<script>
+  const form = document.getElementById("personality-form");
+  const resultado = document.getElementById("resultado");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const hobby = form.hobby.value;
+    const ambiente = form.ambiente.value;
+    const fortaleza = form.fortaleza.value;
+
+    let mensaje = "Eres una persona única, con habilidades que pueden marcar la diferencia. ";
+
+    if (fortaleza === "empatia") {
+      mensaje += "Tu capacidad de ponerte en el lugar de otros es una luz en este mundo. 🫂";
+    } else if (fortaleza === "creatividad") {
+      mensaje += "Tu imaginación puede transformar lo cotidiano en arte. 🎨";
+    } else if (fortaleza === "resiliencia") {
+      mensaje += "Tu fuerza interna te hace admirable. Has superado mucho. 💪";
+    } else if (fortaleza === "liderazgo") {
+      mensaje += "Tienes el poder de inspirar a otros a avanzar. 🌟";
+    }
+
+    mensaje += " Sigue cultivando lo que te hace especial. ¡Estamos orgullosos de ti!";
+
+    resultado.textContent = mensaje;
+    resultado.classList.remove("oculto");
+
+    resultado.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
 </html>
 
 
