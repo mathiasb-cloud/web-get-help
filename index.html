@@ -996,8 +996,70 @@ footer {
 
 
 
+
+
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+  z-index: -1; /* Para que quede al fondo y no tape el contenido */
+}
+
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #faf88b,
+    #f3e7c5,
+    #ffeadc,
+    #e2f0cb,
+    #abe1f7,
+    #9ff7dc,
+    #adf5a4,
+    #e0f8a9
+  );
+  transform: translate(-50%, -50%);
+  animation: rotate 8s linear infinite;
+  filter: blur(50px);
+  opacity: 0.8;
+}
+
+.container::after {
+  width: 180%;
+  height: 180%;
+  animation: rotate-reverse 10s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
   </style>
 <body>
+
+  <div class="container"></div>
   <header>
     <img src="./img/logo.png" alt="Logo" class="logo" />
     <h1>Hola, somos Apoyo</h1>
@@ -1016,7 +1078,7 @@ footer {
     </div>
   </header>
 
-  <h2 class="titulo1">Como prevenir la depresión?</h2>
+  <h2 class="titulo1">Como prevenir la depresión?+</h2>
 
   <section class="grid">
     <div class="card narrow">
@@ -1239,21 +1301,21 @@ footer {
 
 <section class="ayuda-section">
   <h2>¿Necesitas ayuda?</h2>
-  <p>
-    El <strong>Ministerio de Salud (Minsa)</strong> ha habilitado líneas telefónicas de atención inmediata para casos de 
-    <strong>depresión, intentos de suicidio, angustia</strong> y otros problemas de salud mental, garantizando 
-    <strong>confidencialidad total</strong>.
+  <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+    El Ministerio de Salud (Minsa) ha habilitado líneas telefónicas de atención inmediata para casos de 
+    depresión, intentos de suicidio, angustia y otros problemas de salud mental, garantizando 
+    confidencialidad total
   </p>
 
   <div class="ayuda-contacto">
-    <h3>➤ Infosalud – Minsa: <span>0800-10828</span></h3>
-    <p>
+    <h3>➤ Infosalud – Minsa: <a href="tel:080010828" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-decoration: none;"><span>0800-10828</span></a></h3>
+    <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
       Servicio de Orientación y Consejería Telefónica en Salud que incluye un psicólogo especializado en salud mental, disponible para escuchar y brindar apoyo.
     </p>
 
     <h3>➤ Línea de emergencia – Instituto Nacional de Salud Mental:</h3>
-    <p><strong>Teléfono:</strong> <span>381-3695</span></p>
-    <p>
+    <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Teléfono: <a href="tel:3813695" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-decoration: none;"><span>381-3695</span></a></p>
+    <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
       Consejería profesional para quienes enfrentan pensamientos suicidas u otros cuadros emocionales severos.
     </p>
   </div>
